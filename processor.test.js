@@ -16,6 +16,16 @@ describe("transmission processor", function() {
         let result = processor("9701::<489584872710>");
         expect(result.id).not.toEqual(undefined);
     });
+
+    test("id returned must be of type number", function () {
+        let result = processor("9701::<489584872710>");
+        expect(result.id).toEqual(parseInt(result.id));
+    })
+
+    test("returns rawdata in object", function () {
+        let result = processor("9701::<489584872710>");
+        expect(result.rawcode).not.toEqual(undefined);
+    })
     
     
 

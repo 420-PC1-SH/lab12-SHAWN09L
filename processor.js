@@ -4,7 +4,7 @@ function processor(transmission) {
     }
     let parts = transmission.split("::");
     return {
-        id: parts[0],
+        id: parseInt(parts[0]),
         rawcode: parts[1]
     };
 }
